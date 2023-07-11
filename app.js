@@ -10,6 +10,10 @@ app.get('/',(req,res)=>{
     res.sendFile(path.join(__dirname,'./views/home.html'))
 })
 
+app.get('/registroProducto',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./views/registroProducto.html'))
+})
+
 app.listen(3080,()=>{
     console.log('Servidor andando en el puerto 3080')
 })
