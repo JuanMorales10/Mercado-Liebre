@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/registroProducto.css">
+    <title>Mercado Liebre</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="main-header-top-bar">
+            <img src="/img/images/logo-mercado-liebre.svg" alt="logo" class="logo" />
+            <div class="search-bar">
+                <input type="search" placeholder="Buscar productos, marcas" class="search">
+                <button type="submit" class="searchButton butt">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <h2><i class="fa-solid fa-hand-holding-dollar" style="color: #000000;"></i>Compra en coutas y sin tarjeta de
+                credito</h2>
+        </div>
+        <a href="#" class="hamburguer-button">
+            <i class="fas fa-bars"></i>
+        </a>
+        <nav class="main-navbar">
+            <ul class="left-navbar">
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Tiendas oficiales</a></li>
+                <li><a href="">Vender</a></li>
+                <li><a href="">Ayuda</a></li>
+            </ul>
+
+            <ul class="right-navbar">
+                <li><a href="">Crea tu cuenta <i class="fa-regular fa-id-card" style="color: #000000;"></i></a></li>
+                <li><a href="">Ingresa <i class="fa-solid fa-right-to-bracket" style="color: #000000;"></i></a></li>
+                <li><a href="">Mis compras <i class="fa-solid fa-basket-shopping" style="color: #000000;"></i></a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <h1>Registro de Usuario</h1>
+    <form action="/register" method="POST">
+      <div>
+        <label for="nombre">Nombre y Apellido:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      
+      <div>
+        <label for="usuario">Nombre de Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+      </div>
+      
+      <div>
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+      </div>
+      
+      <div>
+        <label for="domicilio">Domicilio:</label>
+        <input type="text" id="domicilio" name="domicilio" required>
+      </div>
+      
+      <div>
+        <label for="perfil">Perfil del Usuario:</label>
+        <select id="perfil" name="perfil" required>
+          <option value="comprador">Comprador</option>
+          <option value="vendedor">Vendedor</option>
+        </select>
+      </div>
+      
+      <div>
+        <label for="categorias">Categorías de Interés:</label>
+        <select id="categorias" name="categorias" multiple required>
+          <option value="electro">Electro</option>
+          <option value="moda">Moda</option>
+          <option value="hogar">Hogar</option>
+          <option value="jugueteria">Juguetería</option>
+          <option value="vidaSana">Vida Sana</option>
+        </select>
+      </div>
+      
+      <div>
+        <label for="foto">Foto de Usuario:</label>
+        <input type="file" id="foto" name="foto" accept="image/*" required>
+      </div>
+      
+      <div>
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+      </div>
+      
+      <div>
+        <label for="confirmarContrasena">Confirmar Contraseña:</label>
+        <input type="password" id="confirmarContrasena" name="confirmarContrasena" required>
+      </div>
+      
+      <button type="submit">Enviar</button>
+      <button type="reset">Borrar</button>
+    </form>
+</body>
+</html>
