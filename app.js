@@ -6,7 +6,6 @@ const ruta = path.resolve(__dirname,'./public')
 app.use(express.static(ruta))
 
 app.get('/',(req,res)=>{
-    // res.sendFile(path.resolve(__dirname,'./views/home.html'))
     res.sendFile(path.join(__dirname,'./views/home.html'))
 })
 
