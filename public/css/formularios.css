@@ -1,0 +1,57 @@
+/* Formulario*/
+
+/*
+● Paleta de colores
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+
+● Tipografías
+Familia: 'Roboto'
+Nos envían esta demo de cómo cargar fuentes de Google Fonts. Además
+podemos consultar el siguiente recurso aquí, para más detalle.
+● Tamaños Tipográficos
+Cuerpos de texto: 12px
+Titulares (Basado en tu última visita/Ofertas): 24px
+Precios: 18px
+Descuentos: 16px
+Descripciones: 16px
+*/
+
+.form{
+  padding: 15px 20px;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+    }
+    
+    .control-formulario{
+      margin-bottom: 15px;
+    }
+    
+    .control-formulario label{
+      margin-bottom: 5px;
+      font-style: italic;
+      display: block;
+    }
+    
+    .control{
+      width: 100%;
+      padding: 8px 8px;
+      border: none;
+      border-radius: 5px;
+    }
+    
+    .boton{
+      background-color: #1259c3;
+      border: none;
+      color: #FFF;
+      font-size: 20px;
+      border-radius: 8px;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+    }
