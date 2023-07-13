@@ -13,11 +13,11 @@ app.get('/registroProducto',(req,res)=>{
     res.sendFile(path.join(__dirname,'./views/registroProducto.html'))
 })
 
-app.get('/register',(req,res)=>{
+app.get('/views/register.html',(req,res)=>{
     res.sendFile(path.join(__dirname,'./views/register.html'))
 })
 
-app.get('/login',(req,res)=>{
+app.get('/views/login.html',(req,res)=>{
     res.sendFile(path.join(__dirname,'./views/login.html'))
 })
 

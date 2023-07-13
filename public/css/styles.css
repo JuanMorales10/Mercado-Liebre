@@ -9,6 +9,8 @@
 .main-header{
   background-color: #eac92c;
   padding: 20px;
+  /* position: fixed;
+  top: 0; */
 }
 
 .main-header-top-bar{
@@ -85,6 +87,10 @@ p {
   color: #666;
 }
 
+.nombre-p p{
+  display: none;
+}
+
 header h2{
   font-size: 16px;
 }
@@ -129,6 +135,10 @@ article {
   background-color: white;
 }
 
+article:hover {
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
 div img {
   width: 90%;
 }
@@ -150,6 +160,7 @@ p.nombre-p {
   width: 430px;
   min-width: 300px;
 }
+
 
 
 .logo-container{
@@ -177,20 +188,28 @@ p.nombre-p {
 .precio {
   font-size: 18px;
   width: 30%;
+  margin: 0;
+  margin-top: 10px;
 }
 
 .descuento {
   font-size: 16px;
   color: #39b54a;
   width: 70%;
+  margin: 0;
   margin-left: 25%;
-  margin-top: 17px;
+  margin-top: 10px;
 }
 
 .descripciones {
   font-size: 16px;
 }
 
+.producto-container:hover{
+  .nombre-p{
+    display: flex;
+  }
+}
 main section article i{
   display: block;
   font-size: 16px;
@@ -204,7 +223,12 @@ main section article i{
   right: 20px;
   top: -15px;
   color: #39b54a;
+  transition: transform 0.3s ease;
   }
+
+  main section article i:hover {
+    transform: rotate(-90deg);
+}
 
 /* Footer */
 
@@ -214,7 +238,14 @@ footer {
 }
 
 .contenido {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 10px; /* Margen inferior de separación de 10 píxeles */
+}
+
+.foot{
+  display: flex;
+  flex-direction: row;
 }
 
 .contenido i {
@@ -237,22 +268,36 @@ footer {
 
 h4.copy {
   margin-top: 35px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+div.foot div i{
+  color: #1259c3;
+  transition: all 0.5s;
+}
+
+div.foot div i:hover{
+ color: #39b54a;
 }
 
 /* Estilos para dispositivos móviles (hasta 360px) */
 
-@media (max-width: 360px) {
+@media (max-width: 410px) {
   ul.sin-punto {
     display: none;
   }
 }
 
-/* Estilos para tablets (a partir de 361px) */
-@media (min-width: 361px) {
+/* Estilos para tablets (a partir de 420px) */
+@media (min-width: 420px) {
   article {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
   
   }
+
+ 
 
   .burger-menu {
     display: none;
@@ -292,4 +337,13 @@ h4.copy {
     padding: 5px;
     
   }
+}
+
+@media (max-width:560px) {
+
+  .foot{
+    display: flex;
+    flex-direction: column;
+  }
+  
 }

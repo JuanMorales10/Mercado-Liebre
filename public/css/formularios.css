@@ -27,6 +27,7 @@ Descripciones: 16px
   display: flex;
   flex-direction: column;
   width: 100%;
+  /* margin-top: 162px; */
     }
     
     .control-formulario{
@@ -54,4 +55,9 @@ Descripciones: 16px
       border-radius: 8px;
       padding: 5px 10px;
       margin-bottom: 10px;
+      transition: all 0.5s ease;
+    }
+
+    .boton:hover{
+      background-color: #0022AA;
     }
