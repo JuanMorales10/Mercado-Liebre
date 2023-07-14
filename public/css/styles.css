@@ -120,7 +120,7 @@ p.nombre-p {
 }
 
 .articulos-container {
-  max-width: 1200px;
+  max-width: 1550px;
   width: auto;
   padding: 15px;
   margin: auto;
@@ -131,8 +131,6 @@ p.nombre-p {
 }
 
 .producto-container {
-  /* width: 430px;
-  min-width: 300px; */
   display: block;
   background-color: white;
   width: 100%;
@@ -140,7 +138,11 @@ p.nombre-p {
   margin: auto;
   margin-bottom: 25px;
   border-radius: 10px;
-  transition: all 450ms;
+  transition: transform 1s ease;
+}
+
+.producto-container:hover {
+  transform: scale(1.1);
 }
 
 .titulo {
@@ -375,3 +377,5 @@ div.foot div i:hover {
     flex-direction: column;
   }
 }
+
+
