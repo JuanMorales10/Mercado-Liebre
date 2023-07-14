@@ -117,6 +117,7 @@ p.nombre-p {
   margin-bottom: 0px;
   margin-top: 35px;
   display: none;
+  color: #666;
 }
 
 .articulos-container {
@@ -138,7 +139,7 @@ p.nombre-p {
   margin: auto;
   margin-bottom: 25px;
   border-radius: 10px;
-  transition: transform 1s ease;
+  transition: transform 1.5s ease;
 }
 
 .producto-container:hover {
@@ -195,7 +196,8 @@ p.nombre-p {
   }
 
   .logo-de-envio {
-    transform: rotate(-90deg);
+    transform: rotate(-450deg);
+    box-shadow: 0 0 5px 2px #39b54a;
   }
 }
 main section article i {
@@ -211,7 +213,8 @@ main section article i {
   right: 20px;
   top: -15px;
   color: #39b54a;
-  transition: transform 0.3s ease;
+  box-shadow: none;
+  transition: transform 1.2s ease, box-shadow 0.7s ease;
 }
 
 /* Footer */
@@ -243,6 +246,7 @@ footer {
 .contenido p {
   color: #8d8888;
   line-height: normal;
+  margin: 18px 10px;
 }
 
 .contenido h4 {
@@ -278,6 +282,10 @@ div.foot div i:hover {
 @media (min-width: 420px) {
   article {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+
+  .producto-container:hover {
+    transform: scale(1.03);
   }
 
   .burger-menu {
