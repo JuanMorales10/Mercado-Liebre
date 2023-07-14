@@ -103,6 +103,7 @@ article:hover {
 
 div img {
   width: 90%;
+  margin-left: 5px;
 }
 
 .banner {
@@ -119,10 +120,6 @@ p.nombre-p {
 }
 
 .articulos-container {
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%; */
   max-width: 1200px;
   width: auto;
   padding: 15px;
@@ -267,7 +264,7 @@ div.foot div i:hover {
   color: #39b54a;
 }
 
-/*Media Queries*/
+/*Media Querie*/
 
 @media (max-width: 410px) {
   ul.sin-punto {
@@ -343,9 +340,6 @@ div.foot div i:hover {
   }
   .contendor-header {
     align-items: center;
-  }
-  .sub-main {
-    width: 20%;
   }
   .destacado {
     font-size: 18px;

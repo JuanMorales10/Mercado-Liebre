@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const ruta = path.resolve(__dirname,'./public')
+const dotenv = require('dotenv').config();
 
 app.use(express.static(ruta))
 
@@ -21,6 +22,8 @@ app.get('/views/login.html',(req,res)=>{
     res.sendFile(path.join(__dirname,'./views/login.html'))
 })
 
-app.listen(3080,()=>{
-    console.log('Servidor andando en el puerto 3080')
+ const port = process.env.PORT;
+
+app.listen(port,()=>{
+    console.log('Servidor andando en el puerto '+ port + '.')
 })
