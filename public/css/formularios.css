@@ -27,11 +27,17 @@ Descripciones: 16px
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* margin-top: 162px; */
+  align-items: center;
+  justify-content: center;
+}
+
+form h1{
+  font-size: 28px;
 }
 
 .control-formulario {
   margin-bottom: 15px;
+  width: 350px;
 }
 
 .control-formulario label {
@@ -49,6 +55,7 @@ Descripciones: 16px
 
 .boton {
   background-color: #1259c3;
+  width: 350px;
   border: none;
   color: #fff;
   font-size: 20px;
