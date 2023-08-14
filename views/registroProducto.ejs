@@ -52,7 +52,7 @@
             <i class="fas fa-bars"></i>
         </a>
     </header>
-    <form action="/product/registroProducto" method="POST" class="form">
+    <form action="/product/registroProducto" method="POST" class="form" enctype="multipart/form-data">
         <h1>Registro de Producto</h1>
         <div class="control-formulario">
             <input type="text" name="nombre" class="control" placeholder="Nombre del Producto">
@@ -76,6 +76,10 @@
                 <option value="ros">Rosario</option>
                 <option value="mdz">Mendoza</option>
             </select>
+        </div>
+        <div class="control-formulario">
+            <label for="">Imagen:</label>
+            <input type="file"  name="image" />
         </div>
         <div class="control-formulario">
             <label for="enOferta">Esta en oferta</label>

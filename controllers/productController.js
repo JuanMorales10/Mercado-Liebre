@@ -11,12 +11,13 @@ const controller = {
         res.render('editProduct', {product : selectedProduct})
     },
     createProduct: (req, res) => {
-        console.log(req.body);
+        
         const newProduct = {
             nombre: req.body.nombre,
             precio: req.body.precio,
             categoria: req.body.categoria,
             ciudad: req.body.ciudad,
+            image: req.file.filename,
             descripcion: req.body.descripcion,
             enOferta: false
         }
@@ -41,7 +42,6 @@ const controller = {
         res.redirect('/');
     },
     deleteProduct:(req, res) => {
-        console.log('hice un delete')
 
         productModel.deleteProduct(Number(req.params.id));
     

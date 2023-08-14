@@ -52,7 +52,7 @@
             <i class="fas fa-bars"></i>
         </a>
     </header>
-    <form action="/product/editProduct/<%= product.id %>?_method=PUT" method="POST" class="form">
+    <form action="/product/editProduct/<%= product.id %>?_method=PUT" method="POST" class="form" enctype="multipart/form-data">
         <h1>Edicion de Producto</h1>
         <div class="control-formulario">
             <input type="text" name="nombre" class="control" value="<%= product.nombre %>">
@@ -78,6 +78,10 @@
             </select>
         </div>
         <div class="control-formulario">
+            <label for="">Cambiar imagen:</label>
+            <input type="file"  name="image" value="<%= product.image %>"  />
+        </div>
+        <div class="control-formulario">
               <label for="si">Sí</label>
               <input type="radio" id="si" name="enOferta" value="true" <% if (product.enOferta === 'true') { %>checked<% } %> />
               <div >
@@ -93,11 +97,10 @@
             <textarea name="descripcion" class="control"></textarea>
         </div>
         <button type="submit" class="boton">Editar</button>
-        <form action="/product/editProduct/<%= product.id %>?_method=DELETE" method="POST">
-              <input type="hidden" name="_method" value="DELETE">
-                <button class="boton-borrar" type="submit">Borrar producto</button>
-          </form>
     </form>
+    <form action="/product/editProduct/<%= product.id %>?_method=DELETE" method="POST">
+        <button class="boton-borrar" type="submit">Borrar producto</button>
+      </form>
     <footer>
         <div class="contenido">
             <div class="foot">

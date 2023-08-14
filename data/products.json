@@ -83,29 +83,10 @@
   {
     "id": 11,
     "nombre": "Juan",
-    "precio": "10",
-    "categoria": "electro",
-    "ciudad": "mdz",
-    "descripcion": "test",
-    "enOferta": false
-  },
-  {
-    "id": 12,
-    "nombre": "Juan",
-    "precio": "10",
+    "precio": "21500",
     "categoria": "hogar",
     "ciudad": "baires",
     "discount": "",
-    "descripcion": "",
-    "_method": "DELETE"
-  },
-  {
-    "id": 13,
-    "nombre": "Nintendo DS",
-    "precio": "20500",
-    "categoria": "electro",
-    "ciudad": "mdz",
-    "descripcion": "juega con nintendo",
-    "enOferta": false
+    "descripcion": ""
   }
 ]
