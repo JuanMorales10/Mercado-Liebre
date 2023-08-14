@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/formularios.css">
+    <title>Mercado Liebre</title>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor-header">
+            <div class="logo">
+                <a href="/">
+                    <img src="/img/images/logo-mercado-liebre.svg">
+                </a>
+            </div>
+            <form action="/search" method="GET" class="buscador">
+                <input type="text" name="keywords" placeholder="Buscar productos, marcas y más" class="buscador-input">
+                <button type="submit" class="buscador-boton"><i class="fas fa-search"></i></button>
+            </form>
+            <h2 class="destacado">
+                <i class="fas fa-hand-holding-usd"></i>
+                Comprá en cuotas y sin tarjeta de crédito
+            </h2>
+        </div>
+        <nav class="listas">
+            <ul>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Tiendas Oficiales</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+            <ul>
+                <li><a href="/views/register.html">Creá tu cuenta</a>
+                    <i class="fas fa-id-card"></i>
+                </li>
+                <li><a href="/views/login.html">Ingresá</a>
+                    <i class="fas fa-sign-in-alt"></i>
+                </li>
+                <li><a href="#">Mis compras</a>
+                    <i class="fas fa-shopping-basket"></i>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </a>
+    </header>
+    <form action="/product/editProduct/<%= product.id %>?_method=PUT" method="POST" class="form">
+        <h1>Edicion de Producto</h1>
+        <div class="control-formulario">
+            <input type="text" name="nombre" class="control" value="<%= product.nombre %>">
+        </div>
+        <div class="control-formulario">
+            <label for="precio">Precio</label>
+            <input type="text" name="precio" value="<%= product.precio %>" class="control">
+        </div>
+        <div class="control-formulario">
+            <label>Categoria</label>
+            <select name="categoria" class="control" >
+                <option value="hogar" <% if (product.categoria === 'hogar') { %>selected<% } %>>Hogar</option>
+                <option value="electro" <% if (product.categoia === 'electro') { %>selected<% } %>>Electro</option>
+                <option value="indumentaria" <% if (product.categoria === 'indumentaria') { %>selected<% } %>>Indumentaria</option>
+            </select>
+        </div>
+        <div class="control-formulario">
+            <label>Ciudad:</label>
+            <select name="ciudad" class="control">
+                <option value="baires" <% if (product.categoria === 'baires') { %>selected<% } %>>Buenos Aires</option>
+                <option value="ros" <% if (product.categoia === 'ros') { %>selected<% } %>>Rosario</option>
+                <option value="mdz" <% if (product.categoria === 'mdz') { %>selected<% } %>>Mendoza</option>
+            </select>
+        </div>
+        <div class="control-formulario">
+              <label for="si">Sí</label>
+              <input type="radio" id="si" name="enOferta" value="true" <% if (product.enOferta === 'true') { %>checked<% } %> />
+              <div >
+                <input type="text"  name="discount" placeholder="Escriba su código aquí" />
+              </div>        
+            <div >
+              <label for="">No</label>
+              <input type="radio"  name="enOferta" value="false" <% if (product.enOferta === 'false') { %>checked<% } %> />
+            </div>
+          </div>
+        <div class="control-formulario">
+            <label for="descripcion">Descripcion del Producto</label>
+            <textarea name="descripcion" class="control"></textarea>
+        </div>
+        <button type="submit" class="boton">Editar</button>
+        <form action="/product/editProduct/<%= product.id %>?_method=DELETE" method="POST">
+              <input type="hidden" name="_method" value="DELETE">
+                <button class="boton-borrar" type="submit">Borrar producto</button>
+          </form>
+    </form>
+    <footer>
+        <div class="contenido">
+            <div class="foot">
+                <div>
+                    <i class="fa-solid fa-credit-card"></i>
+                    <h3>Pagá con tarjeta o en efectivo</h3>
+                    <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
+                        puntos de pago. ¡Y siempre es seguro!</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-gift"></i>
+                    <h3>Envío gratis desde $ 2.500</h3>
+                    <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
+                        productos. Es un beneficio de Mercado Puntos.</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-user-shield"></i>
+                    <h3>Seguridad, de principio a fin</h3>
+                    <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás
+                        siempre
+                        protegid@.</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="copy">Copyright © 1999-2023 MercadoLiebre S.R.L.</h4>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

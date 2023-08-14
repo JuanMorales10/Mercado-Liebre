@@ -1,0 +1,111 @@
+[
+  {
+    "id": 1,
+    "nombre": "Cathe10",
+    "precio": "4",
+    "categoria": "hogar",
+    "ciudad": "baires",
+    "discount": "",
+    "descripcion": ""
+  },
+  {
+    "id": 2,
+    "nombre": "Bethanne",
+    "precio": 2,
+    "categoria": "Construction Clean and Final Clean",
+    "ciudad": "Wutong",
+    "descripcion": "Broad ligament lacer syn"
+  },
+  {
+    "id": 3,
+    "nombre": "Kiersten",
+    "precio": 6,
+    "categoria": "Masonry",
+    "ciudad": "Timezgana",
+    "descripcion": "Vit A cornea ulcer/xeros"
+  },
+  {
+    "id": 4,
+    "nombre": "Joey",
+    "precio": 6,
+    "categoria": "Glass & Glazing",
+    "ciudad": "Pavlogradka",
+    "descripcion": "Mult open wound nose"
+  },
+  {
+    "id": 5,
+    "nombre": "Hynda",
+    "precio": 4,
+    "categoria": "EIFS",
+    "ciudad": "Iksan",
+    "descripcion": "Human herpesvirs inf NEC"
+  },
+  {
+    "id": 6,
+    "nombre": "Thaddeus",
+    "precio": 2,
+    "categoria": "Casework",
+    "ciudad": "Hengshan",
+    "descripcion": "Inj external carotid art"
+  },
+  {
+    "id": 7,
+    "nombre": "Isidor",
+    "precio": 4,
+    "categoria": "Temp Fencing, Decorative Fencing and Gates",
+    "ciudad": "Lewin Kłodzki",
+    "descripcion": "Fetal death-anoxia NOS"
+  },
+  {
+    "id": 8,
+    "nombre": "Guinevere",
+    "precio": 6,
+    "categoria": "Retaining Wall and Brick Pavers",
+    "ciudad": "Vale de Figueira",
+    "descripcion": "Puerperl sepsis-postpart"
+  },
+  {
+    "id": 9,
+    "nombre": "Aubrey",
+    "precio": 6,
+    "categoria": "Landscaping & Irrigation",
+    "ciudad": "Raminho",
+    "descripcion": "Illegitimate pregnancy"
+  },
+  {
+    "id": 10,
+    "nombre": "Hieronymus",
+    "precio": 2,
+    "categoria": "Roofing (Metal)",
+    "ciudad": "Thị Trấn Tủa Chùa",
+    "descripcion": "Dacryoadenitis NOS"
+  },
+  {
+    "id": 11,
+    "nombre": "Juan",
+    "precio": "10",
+    "categoria": "electro",
+    "ciudad": "mdz",
+    "descripcion": "test",
+    "enOferta": false
+  },
+  {
+    "id": 12,
+    "nombre": "Juan",
+    "precio": "10",
+    "categoria": "hogar",
+    "ciudad": "baires",
+    "discount": "",
+    "descripcion": "",
+    "_method": "DELETE"
+  },
+  {
+    "id": 13,
+    "nombre": "Nintendo DS",
+    "precio": "20500",
+    "categoria": "electro",
+    "ciudad": "mdz",
+    "descripcion": "juega con nintendo",
+    "enOferta": false
+  }
+]
