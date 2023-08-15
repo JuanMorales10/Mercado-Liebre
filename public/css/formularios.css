@@ -31,6 +31,10 @@ Descripciones: 16px
   justify-content: center;
 }
 
+.error-messages{
+  color: red;
+}
+
 form h1{
   font-size: 28px;
 }

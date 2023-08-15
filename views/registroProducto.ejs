@@ -54,47 +54,54 @@
     </header>
     <form action="/product/registroProducto" method="POST" class="form" enctype="multipart/form-data">
         <h1>Registro de Producto</h1>
+        <br>
+        <% if (locals.errors) { %>   
+                <% errors.forEach(error => { %>
+                    <p class="error-messages"><%= error.msg %></p>
+                <% }); %>
+        <% } %>
+        <br>
         <div class="control-formulario">
-            <input type="text" name="nombre" class="control" placeholder="Nombre del Producto">
+            <input type="text" name="nombre" class="control" placeholder="Nombre del Producto" value="<%= locals.old && old.nombre ? old.nombre : '' %>">
         </div>
         <div class="control-formulario">
             <label for="precio">Precio</label>
-            <input type="text" name="precio" placeholder="100.500" class="control">
+            <input type="text" name="precio" placeholder="100.500" class="control" value="<%= locals.old && old.precio ? old.precio : '' %>">
         </div>
         <div class="control-formulario">
             <label>Categoria</label>
             <select name="categoria" class="control">
-                <option value="hogar">Hogar</option>
-                <option value="electro">Electro</option>
-                <option value="indumentaria">Indumentaria</option>
+                <option value="hogar" <% if (locals.old && old.categoria === 'hogar') { %>selected<% } %>>Hogar</option>
+                <option value="electro"  <% if (locals.old && old.categoria === 'electro') { %>selected<% } %>>Electro</option>
+                <option value="indumentaria"  <% if (locals.old && old.categoria === 'indumentaria') { %>selected<% } %>>Indumentaria</option>
             </select>
         </div>
         <div class="control-formulario">
             <label>Ciudad:</label>
             <select name="ciudad" class="control">
-                <option value="baires">Buenos Aires</option>
-                <option value="ros">Rosario</option>
-                <option value="mdz">Mendoza</option>
+                <option value="baires"  <% if (locals.old && old.ciudad === 'baires') { %>selected<% } %>>Buenos Aires</option>
+                <option value="ros"  <% if (locals.old && old.ciudad === 'ros') { %>selected<% } %>>Rosario</option>
+                <option value="mdz"  <% if (locals.old && old.ciudad === 'mdz') { %>selected<% } %>>Mendoza</option>
             </select>
         </div>
         <div class="control-formulario">
             <label for="">Imagen:</label>
-            <input type="file"  name="image" />
+            <input type="file" name="image" value="<%= locals.old && old.image ? old.image : '' %>">
         </div>
         <div class="control-formulario">
             <label for="enOferta">Esta en oferta</label>
             <label for="">Si</label>
-            <input type="radio" name="enOferta" value="true">
+            <input type="radio" name="enOferta" value="true"  <% if (locals.old && old.enOferta === 'true') { %>checked<% } %>>
             <label for="">No</label>
-            <input type="radio" name="enOferta" value="false">
+            <input type="radio" name="enOferta" value="false" <% if (locals.old && old.enOferta === 'false') { %>checked<% } %>>
         </div>
         <div class="control-formulario">
             <label for="descripcion">Descripcion del Producto</label>
-            <textarea name="descripcion" class="control"></textarea>
+            <textarea name="descripcion" class="control"> <%= locals.old && old.descripcion ? old.descripcion : '' %></textarea>
         </div>
         <button type="submit" class="boton">Guardar</button>
         <button type="reset" class="boton">Borrar</button>
-    </form>
+    </form>  
     <footer>
         <div class="contenido">
             <div class="foot">
